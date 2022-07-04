@@ -41,6 +41,10 @@
         .accordion {
             width: 700px;
             margin: 100px auto;
+
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
         }
 
         .item {
@@ -56,7 +60,11 @@
         .number, .text {
             font-size: 24px;
             font-weight: 500;
-            color: #087F5B;
+            /* color: #087F5B; */
+        }
+
+        .number {
+            color: #ced4da;
         }
     
         .icon {
@@ -66,6 +74,7 @@
         }
         .hidden-box {
             grid-column: 2;
+            display: none;
         }
 
         .hidden-box p {
@@ -82,10 +91,17 @@
             gap: 12px;
         }
 
-        /*.hidden-box li {
-            margin-bottom: 12px;
+        .open {
+            border-top: 4px solid #087F5B;
         }
-*/
+
+        .open .hidden-box {
+            display: block;
+        }
+
+        .open .number, .open .text {
+            color: #087F5B;
+        }
 
     </style>
 </head>
@@ -110,10 +126,8 @@
             </ul>
         </div>
         </div>
-    </div>
-
-    <div class="accordion">
-        <div class="item">
+    
+        <div class="item open">
         <p class="number">02</p>
         <p class="text">How long do i have to return my chair?</p>
         <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -131,9 +145,7 @@
             </ul>
         </div>
         </div>
-    </div>
-
-    <div class="accordion">
+  
         <div class="item">
         <p class="number">03</p>
         <p class="text">Do you ship to countries outside the EU?</p>
