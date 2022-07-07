@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Layout</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            color: #343a40;
+            font-size: 24px;
+            height: 100vh;
+
+            display: grid;
+            grid-template-columns: 80px 400px 1fr 250px;
+            grid-template-rows: 80px 1fr;
+        }
+
+        nav {
+            background-color: #343a40;
+        }
+
+        menu {
+            background-color: #7048eb;
+            color: #fff;
+        }
+
+        section {
+            background-color: #e9ecef;
+        }
+
+        aside {
+            background-color: #e9ecef;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <nav>Nav</nav>
+    <menu>Menu</menu>
+    <section>Inbox</section>
+    <main>Email view</main>
+    <aside>Additional info</aside>
+</body>
+</html>
